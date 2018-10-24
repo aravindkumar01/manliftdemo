@@ -71,6 +71,31 @@ public class Field1 {
     private String end_time;
 	
 	@NotBlank
+	@Column(name="arrived_time")
+    private String arrived_time;
+	
+	@NotBlank
+	@Column(name="departed_time")
+    private String departed_time;
+	
+	public String getArrived_time() {
+		return arrived_time;
+	}
+
+	public void setArrived_time(String arrived_time) {
+		this.arrived_time = arrived_time;
+	}
+
+	public String getDeparted_time() {
+		return departed_time;
+	}
+
+	public void setDeparted_time(String departed_time) {
+		this.departed_time = departed_time;
+	}
+
+
+	@NotBlank
 	@Column(name="site_address")
     private String site_address;
 	
@@ -108,6 +133,8 @@ public class Field1 {
 	@NotBlank
 	@Column(name="emp_id")
     private String emp_id;
+	
+	
 
 	public String getFemp_id() {
 		return femp_id;
