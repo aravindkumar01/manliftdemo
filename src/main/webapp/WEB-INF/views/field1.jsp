@@ -159,7 +159,7 @@ $(document).ready(function(){
 		<div class="form-group col-sm-4">
           <label class="row-sm-6">Site Contact</label>
 		  <div class="row-sm-6">
-              <input type="text" placeholder="mobile number" pattern="[789][0-9]{9}" class="form-control" id="mobile" name="mobile" required="required">
+              <input type="text" placeholder="mobile number"  class="form-control" id="mobile" name="mobile" required="required">
             </div>
 		</div>  
 
@@ -188,7 +188,7 @@ $(document).ready(function(){
 			    <div class="form-group col-sm-4">
                     <label class="row-sm-6">Total" Down Time" of Machine(Hrs):</label>
 		            <div class="row-sm-6">
-                       <input type="text" placeholder="" class="form-control time" id="down_time" name="down_time" required="required">
+                       <input type="text" placeholder="total_time" class="form-control time" id="down_time" name="down_time" required="required">
                      </div>
 		       </div> 
 			   
@@ -211,6 +211,7 @@ $(document).ready(function(){
 		            <div class="row-sm-6">
                        <select class="form-control" id="model" name="model">
 						        
+<option value="select">Select</option>
   <!--Electric Scissor Lift-->
   <option value="1932 ES">1932 ES</option>
   <option value="2646 ES">2646 ES</option>
@@ -334,17 +335,41 @@ $(document).ready(function(){
                      </div>
 		       </div>
 			    <div class="form-group col-sm-4">
-                    <label class="row-sm-6">Time arrived:</label>
-					 <label class="row-sm-6">Job Start Time:</label>
+                    <label class="row-sm-6">Job Start Time:</label>
+				
 		            <div class="row-sm-6">
                        <input type="time" placeholder="" class="form-control" id="start_time" name="start_time" required="required">
                      </div>
 		       </div>
 			   <div class="form-group col-sm-4">
-			        <label class="row-sm-6">Job End Time:</label>
-                    <label class="row-sm-6">Time Departed:</label>
+			        
+                    <label class="row-sm-6">Job End Time:</label>
 		            <div class="row-sm-6">
                        <input type="time" placeholder="" class="form-control" id="end_time" name="end_time" required="required">
+                     </div>
+		       </div>
+
+
+</div><!--end fourth row!-->
+
+
+
+
+<div class="row" style="margin-left:20px;margin-right:20px;"><!--fourth row!-->
+
+              
+			    <div class="form-group col-sm-6">
+                  
+					 <label class="row-sm-6">Time arrived:</label>
+		            <div class="row-sm-6">
+                       <input type="time" placeholder="" class="form-control" id="arrived_time" name="arrived_time" required="required">
+                     </div>	
+		       </div>
+			   <div class="form-group col-sm-6">
+			        <label class="row-sm-6">Time Departed:</label>
+                    
+		            <div class="row-sm-6">
+                       <input type="time" placeholder="" class="form-control" id="departed_time" name="departed_time" required="required">
                      </div>
 		       </div>
 
@@ -472,13 +497,21 @@ $(document).ready(function(){
   
 
 </div>
+<br>
+<div class="row">
 
-<div class="row" style="margin-left:1000px;"><!--button!-->
+                  <div class="col-sm-4"></div>
+                   <div class="col-sm-4" style="margin-left:100px;">
+				     
+				        <button type="submit" class="btn btn-primary btn-lg " id="save">Next</button>
+				   </div>
+				    <div class="col-sm-4">
+					         
+					</div>
 
-    <button type="submit" class="btn btn-primary btn-lg" id="save">Next</button>
-                
-	    <br><br>
-</div><!--end button!-->
+</div>
+  <br><br>
+
 </form>
 </div><!--end panel!-->
 </div><!--end container!-->
