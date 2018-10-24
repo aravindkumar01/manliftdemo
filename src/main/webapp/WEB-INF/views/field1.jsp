@@ -342,7 +342,7 @@ $(document).ready(function(){
 		       </div>
 			   <div class="form-group col-sm-4">
 			        <label class="row-sm-6">Job End Time:</label>
-                    <label class="row-sm-6">Time Time Departed:</label>
+                    <label class="row-sm-6">Time Departed:</label>
 		            <div class="row-sm-6">
                        <input type="time" placeholder="" class="form-control" id="end_time" name="end_time" required="required">
                      </div>
