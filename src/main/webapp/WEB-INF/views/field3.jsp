@@ -368,7 +368,7 @@ $(document).ready(function(){
 							<div class="form-check">
                                <input class="form-check-input" type="checkbox" value="" id="hydraulic" name="hydraulic">
                                 <label class="form-check-label" for="defaultCheck1">
-                                 Hydraulic House
+                                 Hydraulic Hoses
                                 </label>
                             </div> 
 							<div class="form-check">
@@ -442,7 +442,7 @@ $(document).ready(function(){
                             <div class="form-check">
                                <input class="form-check-input" type="checkbox" value="" id="stering" name="stering">
                                 <label class="form-check-label" for="defaultCheck1">
-                                 Stering cylinder and torque hub
+                                 Steering cylinder and torque hub
                                 </label>
                             </div> 
                             							

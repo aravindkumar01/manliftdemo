@@ -301,10 +301,42 @@ $(document).ready(function(){
                           <input type="text" class="form-control" name="name">
                         </div>
                       </div>
-                      <div class="col-md-4">
+					      <div class="col-md-4">
+                        <div class="form-group">
+                         
+                          
+                          <select class="form-control" id="gender" name="gender">					        
+                              <option value="">Select Gender</option>
+                              <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+								<option value="Transgender">Transgender</option>
+								
+                              </select>
+                        </div>
+                      </div>
+                    
+                    </div>
+					
+					
+					
+					
+					    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Date_Of_Birth</label>
+                          <input type="date" class="form-control" name="dob">
+                        </div>
+                      </div>
+                    <div class="col-md-5">
                         <div class="form-group">
                           <label class="bmd-label-floating">Email address</label>
                           <input type="email" class="form-control" name="email">
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Mobile</label>
+                          <input type="text" class="form-control" name="mobile">
                         </div>
                       </div>
                     </div>

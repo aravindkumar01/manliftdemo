@@ -418,8 +418,8 @@ $(document).ready(function(){
 				</select>
 	      </div>
 		<div class="form-group col-sm-4">    
-		       <label class="col-sm-6">OrientationPerformed:</label>
-                 <select class="form-control" class="col-sm-6" id="orient" name="oriant">
+		       <label class="col-sm-6">Orientation Performed:</label>
+                 <select class="form-control" class="col-sm-8" id="orient" name="oriant">
       
                    <option value="cs">NO</option>
                     <option value="cy">YES</option>
