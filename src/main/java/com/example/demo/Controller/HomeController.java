@@ -66,7 +66,7 @@ public class HomeController {
 	public String storeDash()
 	{
 	
-		return "storeDash";
+		return "dashStore";
 }	
 	
 	@RequestMapping("/productRequest")
