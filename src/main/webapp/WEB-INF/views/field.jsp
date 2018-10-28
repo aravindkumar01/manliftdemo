@@ -389,7 +389,7 @@ $("#SearchEmp").click(function(){
                         <th>MODEL</th>
                         <th>SR-NO</th>
                         <th>HourMeter</th>
-                        <th>WorkOutCarrirdOut</th>
+                        <th>WorkCarriedOut</th>
                         <th>View</th>
                       </thead>
                       <tbody id="td">
@@ -467,7 +467,7 @@ $("#SearchEmp").click(function(){
                         <th>MODEL</th>
                         <th>SR-NO</th>
                         <th>HourMeter</th>
-                        <th>WorkOutCarrirdOut</th>
+                        <th>WorkCarriedOut</th>
                         <th>View</th>
                       </thead>
                       <tbody id="td1">
