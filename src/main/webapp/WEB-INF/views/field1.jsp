@@ -314,7 +314,7 @@ $(document).ready(function(){
                      </div>
 		       </div>
           <div class="form-group col-sm-4">
-                    <label class="row-sm-6">Fleet Serial Number</label>
+                    <label class="row-sm-6">Fleet/Serial Number</label>
 		            <div class="row-sm-6">
                        <input type="number" placeholder="Serial Number" class="form-control" name="fleet_serial" id="fleet_serial" required="required">
                      </div>
@@ -448,7 +448,7 @@ $(document).ready(function(){
   <div class="col-sm-6">
   
              <div class="form-group col-sm-12">
-                    <label class="row-sm-6">OperatorName:</label>
+                    <label class="row-sm-6">Operator Name:</label>
 		            <div class="row-sm-6">
                        <input type="text" placeholder="Names" class="form-control" name="operator" name="operator" required="required">
                      </div>

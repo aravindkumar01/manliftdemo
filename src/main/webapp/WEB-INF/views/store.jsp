@@ -183,7 +183,7 @@
                         <tr>
                           <td>EMP011</td>
                           <td>Karthik</td>
-                          <td>Machine,Wire</td>
+                          <td>Sensor,coil</td>
                           <td>5</td>
                           <td class="btn btn-primary">
                             View
