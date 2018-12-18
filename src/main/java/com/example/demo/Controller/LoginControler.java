@@ -30,6 +30,11 @@ public class LoginControler {
 					model.addAttribute("error",true);
 					return "loginBac";
 			 }
+			 if(result.equals("field1"))
+			 {
+					model.addAttribute("user",login.getUsername());
+					return "field1";
+			 }
 			
 		} catch (Exception e) {
 			System.out.println(e);

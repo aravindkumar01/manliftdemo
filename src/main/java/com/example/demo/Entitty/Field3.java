@@ -22,6 +22,32 @@ public class Field3 {
 	@Column(name="component")
     private String component;
 
+	@NotBlank
+	@Column(name="username")
+    private String username;
+	@NotBlank
+	@Column(name="date_site")
+    private String date_site;
+	
+	public String getDate_site() {
+		return date_site;
+	}
+
+
+	public void setDate_site(String date_site) {
+		this.date_site = date_site;
+	}
+
+
+	public String getUsername() {
+		return username;
+	}
+
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
 
 	public Long getId() {
 		return id;

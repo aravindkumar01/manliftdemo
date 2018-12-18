@@ -41,6 +41,7 @@ $(document).ready(function(){
 	var today =yyyy+'-'+ mm+'-'+dd;
 	//alert(today);
 	var id=1;
+	
 $.ajax({
 	type: 'GET',
 	dataType: 'json',
@@ -53,6 +54,7 @@ $.ajax({
 	 $.each(data,function( i,j ) {
 		 if(today==j.date_call)
 			 {
+			 var username=j.username+","+today;
     	      var row = '<tr>' 
 		    	    + '<td value="'+id+'">'+ id + '</td>'
 					+ '<td>'+j.tech+'</td>'
@@ -60,7 +62,7 @@ $.ajax({
 					+ '<td>'+j.fleet_serial+'</td>'
 					+ '<td>'+j.hour_meter+'</td>'
 					+ '<td>'+j.job_carriout+'</td>'
-					+ '<td  ><button class="btn btn-primary" onclick="" style="color:white">View</button></td>'
+					+ '<td  ><a class="btn btn-primary" href="/test?uname='+username+'">view</a></td>'
 					+'</tr>';
 						
 		    	 $("#td").append(row); 
@@ -170,7 +172,7 @@ $("#SearchEmp").click(function(){
 					 {
 					       if(j.date_call==search)
 					    	   {
-					    	       
+					    	       var username=j.username+","+today;
 					    	   var row = '<tr>' 
 						    	    + '<td value="'+id+'">'+ id + '</td>'
 									+ '<td>'+j.tech+'</td>'
@@ -178,8 +180,8 @@ $("#SearchEmp").click(function(){
 									+ '<td>'+j.fleet_serial+'</td>'
 									+ '<td>'+j.hour_meter+'</td>'
 									+ '<td>'+j.job_carriout+'</td>'
-									+ '<td  ><button class="btn btn-primary" onclick="" style="color:white">View</button></td>'
-									+'</tr>';
+									+ '<td  ><a class="btn btn-primary" href="/test?uname='+username+'">view</a></td>'
+												+'</tr>';
 										
 						    	 $("#td1").append(row); 
 						    	
@@ -190,8 +192,9 @@ $("#SearchEmp").click(function(){
 				 if(option=="tech_name")
 				 {
 				       if(j.tech==search)
-				    	   {
-				    	       
+				    	   {	
+				    	   var username=j.username+","+today
+				    	   alert(username);		    	       
 				    	   var row = '<tr>' 
 					    	    + '<td value="'+id+'">'+ id + '</td>'
 								+ '<td>'+j.tech+'</td>'
@@ -199,7 +202,7 @@ $("#SearchEmp").click(function(){
 								+ '<td>'+j.fleet_serial+'</td>'
 								+ '<td>'+j.hour_meter+'</td>'
 								+ '<td>'+j.job_carriout+'</td>'
-								+ '<td  ><button class="btn btn-primary" onclick="" style="color:white">View</button></td>'
+								+ '<td  ><a class="bt btn-primary" href="/test?uname='+username+'">View All</a> </td>'
 								+'</tr>';
 									
 					    	 $("#td1").append(row); 
@@ -207,7 +210,8 @@ $("#SearchEmp").click(function(){
 					    	 id++; 
 				    	   }
 				 
-				 }		   	  });	
+				 }		   	 
+				  });	
 			
 			},
 			error: function(xhr, textStatus, errorThrown){
@@ -219,8 +223,7 @@ $("#SearchEmp").click(function(){
  
    });
 
-  
-  
+
   
 });
 
@@ -255,7 +258,7 @@ $("#SearchEmp").click(function(){
           <li class="nav-item ">
             <a class="nav-link" href="user">
               <i class="material-icons">person</i>
-              <p>Employee Profile</p>
+              <p>Employee Report</p>
             </a>
           </li>
           <li class="nav-item  active">
@@ -423,7 +426,7 @@ $("#SearchEmp").click(function(){
 							</div>
 							  <div class="col-sm-3" id="d1">
 							        <div class="form-group">
-                                       <label class="bmd-label-floating">Date of Join</label>
+                                       <label class="bmd-label-floating">Date of Report</label>
                                        <input type="date" class="form-control" id="dateField">
 						       
                                     </div>

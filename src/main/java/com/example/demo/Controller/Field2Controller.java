@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,17 +22,18 @@ public class Field2Controller {
 	Field2Service service;
 	@RequestMapping(value="/field2",method=RequestMethod.POST)
 
-	   public  @ResponseBody String  getSearchUserProfiles(@RequestBody Field2 field, HttpServletRequest request) {
+	   public   String  getSearchUserProfiles(@RequestBody Field2 field, Model model) {
 	    
        
 		try {
 			
  			service.field2Save(field);
-		} catch (Exception e) {
+ 		} catch (Exception e) {
+			System.out.println(e);
 			// TODO: handle exception
 		}
-	       // your logic next
-		return "field3";
-	   }
+	
+			return "field3";
+}
 	
 }

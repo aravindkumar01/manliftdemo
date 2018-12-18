@@ -67,7 +67,11 @@ function patrs() {
     window.print();
 }
 $(document).ready(function(){
-           
+
+    $("#username").val(sessionStorage.getItem("id"));
+    $("#q").val(sessionStorage.getItem("id"));
+
+  
 		       $("#save").click(function(){
                      
                             var component="";
@@ -225,12 +229,30 @@ $(document).ready(function(){
                 component=component+",Others";
 
             }	
-		
-       var field3={"component":component};
- 	 
-			
 
-               $.ajax({
+				var username=sessionStorage.getItem("id");
+			    var today = new Date();
+			  	var dd = today.getDate();
+			  	var mm = today.getMonth()+1; //January is 0!
+			  	var yyyy = today.getFullYear();
+
+			  	if(dd<10) {
+			  	    dd = '0'+dd
+			  	} 
+
+			  	if(mm<10) {
+			  	    mm = '0'+mm
+			  	} 
+
+			  	today =  yyyy + '-' + mm + '-' + dd;
+			    var date_site=today;
+			  
+				  
+				
+       var field3={"component":component,"username":username,"date_site":date_site};
+
+
+     	   $.ajax({
 		      type: "POST",
 		      contentType : 'application/json; charset=utf-8',
 		      dataType : 'json',
@@ -309,7 +331,7 @@ $(document).ready(function(){
 
 </div><!--end row!-->
 <div class="row-sm-3">
-<h3 class="col-sm-1"></h3>
+<h3 class="col-sm-1" id="q"></h3>
 
 </div>
 

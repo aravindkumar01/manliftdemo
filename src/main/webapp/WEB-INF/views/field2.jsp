@@ -65,6 +65,8 @@ function patrs() {
     window.print();
 }
 $(document).ready(function(){
+
+
            
 		       $("#save").click(function(){
                    
@@ -186,13 +188,28 @@ $(document).ready(function(){
 	          
 			  }
 
-	      
+	    var username='${user}';
+	    var today = new Date();
+	  	var dd = today.getDate();
+	  	var mm = today.getMonth()+1; //January is 0!
+	  	var yyyy = today.getFullYear();
+
+	  	if(dd<10) {
+	  	    dd = '0'+dd
+	  	} 
+
+	  	if(mm<10) {
+	  	    mm = '0'+mm
+	  	} 
+
+	  	today =  yyyy + '-' + mm + '-' + dd;
+	    var date_site=today;
+	    alert(date_site);
 		  
-		  var field={"fault_des":fault_des,"fault_parts":fault,"parts":parts,"quantity":quantity,"part_number":part_number};
+		  var field={"fault_des":fault_des,"fault_parts":fault,"parts":parts,"quantity":quantity,"part_number":part_number,"username":username,"date_site":date_site};
 		 
-		
-		     
-		       
+		    // alert(username);
+		  sessionStorage.setItem("id",username);
 		  $.ajax({
 		      type: "POST",
 		      contentType : 'application/json; charset=utf-8',
@@ -283,17 +300,18 @@ $(document).ready(function(){
 
 </div><!--end row!-->
 <div class="row-sm-3">
-<h3 class="col-sm-1"></h3>
+<h3 class="col-sm-1">${user}</h3>
 
 </div>
 
 
 </div><!--end header!-->
 <hr/><hr>
-
-
+<%-- 
+${{user}} --%>
 
 <form> 
+
 <div class="row" style="margin-left:10px;margin-right:30px;"><!--eight row!-->
 
          <div class="form-group row">

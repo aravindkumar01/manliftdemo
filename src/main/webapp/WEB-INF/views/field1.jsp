@@ -3,7 +3,6 @@
 <title>Service</title>
 <link rel="stylesheet" href="bootstrap.min.css">
 
-<!-- jQuery library -->
 <script src="jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
@@ -16,6 +15,11 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="./javascript.js"></script>
+<script
+    src="http://maps.googleapis.com/maps/api/js?key=YOUR_APIKEY&sensor=false">
+</script>
 <style>
 #logo{
 margin-top: 20px;
@@ -46,6 +50,10 @@ background-color:red;
 <script>
 
 $(document).ready(function(){
+
+
+	
+  
            
 		       $("#save").click(function(){
                     		   
@@ -132,7 +140,7 @@ $(document).ready(function(){
 
 </div><!--end row!-->
 <div class="row-sm-3">
-<h3 class="col-sm-1"></h3>
+<h3 class="col-sm-1" id="q">${user }</h3>
 
 </div>
 
@@ -143,6 +151,10 @@ $(document).ready(function(){
 
 <div class="row" ><!--first row!-->
 <form   modelAttribute="Field" action="reportCreation" method="post" commandname="Field1">
+<div class="col-sm-12 hide">
+             <input type="text" placeholder="" class="form-control" value='${user}' id="date_call" name="username" required="required">
+    
+</div>
 <div class="col-sm-12">
        <div class="form-group col-sm-4">
           <label class="row-sm-6">Date call Received</label>
@@ -403,8 +415,8 @@ $(document).ready(function(){
 		       <label class="col-sm-6">Problem Solved:</label>
                  <select class="form-control" class="col-sm-6" id="problem" name="problem" >
       
-                   <option value="cs">NO</option>
-                    <option value="cy">YES</option>
+                   <option value="NO">NO</option>
+                    <option value="YES">YES</option>
                   
 				</select>
 	      </div>
@@ -412,8 +424,8 @@ $(document).ready(function(){
 		       <label class="col-sm-6">Client informed:</label>
                  <select class="form-control" class="col-sm-6" id="client_inform" name="client_inform">
       
-                   <option value="cs">NO</option>
-                    <option value="cy">YES</option>
+                   <option value="NO">NO</option>
+                    <option value="YES">YES</option>
                   
 				</select>
 	      </div>
@@ -421,8 +433,8 @@ $(document).ready(function(){
 		       <label class="col-sm-10">Orientation Performed:</label>
                  <select class="form-control" class="col-sm-8" id="orient" name="oriant">
       
-                   <option value="cs">NO</option>
-                    <option value="cy">YES</option>
+                   <option value="NO">NO</option>
+                    <option value="YES">YES</option>
                   
 				</select>
 	      </div>
@@ -484,19 +496,7 @@ $(document).ready(function(){
 </div><!--end nine row!-->
 
 
-<div class="row hide" style="margin-right:60px;"><!--nine row!-->
 
-     <div class="form-group col-sm-4">    
-		       <label class="col-sm-12">EMP-ID:</label>
-                  <div class="row-sm-12">
-                       <input type="text" placeholder="Names" class="form-control" id="femp_id" name="femp_id">
-                     </div>
-                  
-				</select>
-	      </div>
-  
-
-</div>
 <br>
 <div class="row">
 

@@ -12,12 +12,25 @@ import javax.validation.constraints.NotBlank;
 @Table(name="field2")
 public class Field2 {
 
+	public String getDate_site() {
+		return date_site;
+	}
+
+
+	public void setDate_site(String date_site) {
+		this.date_site = date_site;
+	}
+
+
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
     private Long id;
 	
-      
+	@NotBlank
+	@Column(name="date_site")
+    private String date_site;
+	
 	@NotBlank
 	@Column(name="fault_des")
     private String fault_des;
@@ -41,6 +54,19 @@ public class Field2 {
 	@NotBlank
 	@Column(name="part_number")
     private String part_number;
+
+	@NotBlank
+	@Column(name="username")
+    private String username;
+
+	public String getUsername() {
+		return username;
+	}
+
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
 
 	public Long getId() {
